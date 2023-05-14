@@ -1,0 +1,311 @@
+/* GENERAL SETTING */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow-x: hidden;
+}
+
+.sharp-button {
+    border-radius: 0px !important;
+
+}
+
+/* ----------------------------------------- NAVBAR */
+.bg-dark {
+    background-color: #141414 !important;
+}
+
+nav{
+    z-index: 50!important;
+}
+
+a.logo {
+    transform: translateX(-6.5px);
+}
+
+img.avatar {
+    width: 40px !important;
+    margin: 10px;
+}
+
+.navbar .navbar-nav img {
+    width: 50px;
+}
+
+div.dropstart ul.dropdown-menu{
+    width: 250px!important;
+}
+
+ul.dropdown-menu li a:hover{
+    text-decoration: underline;
+    color: white;
+    background-color: #141414!important;
+}
+
+
+/* ---------------------------------- Style MOVIE INFO CARD */
+
+.bg-custom {
+    background-color: #181818 !important;
+}
+
+.card-body {
+    height: 125px;
+}
+
+.video-icon {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+ul.list-inline li {
+    font-size: .8em;
+    margin-right: 5px;
+}
+
+.evidence-separator {
+    width: 4.5px;
+    height: 4.5px;
+    background-color: rgba(128, 128, 128, 0.534);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.restriction {
+    font-size: 0.6em;
+}
+
+div.card-img img {
+    border-radius: 5px !important;
+}
+
+/* ------------------------------- Animation MOVIE INFO CARD */
+
+.carousel-item{
+    z-index: 0!important;
+}
+
+.overlay:hover .d-none {
+    display: block !important;
+
+}
+
+
+ .overlay:hover {
+    transform: scale(1.3);
+    z-index: 99!important;
+    transition: 0.6s;
+    animation-delay: 0.9s;
+    transition-timing-function: ease-out;
+}
+
+.overlay:hover div.card-img {
+    padding: 0 0 !important;
+}
+
+
+/* ------------------------------- ANIMAZIONE CAROSELLI ON PAGE LOAD */
+
+.carousel-down{
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.carousel-show{
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.7s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-out;
+}
+
+div.animazione:nth-child(3){
+    transition-delay: 0.2s;
+}
+
+div.animazione:nth-child(4){
+    transition-delay: 0.3s;
+}
+
+
+/* ---------------------------------- Bootstrap overwrites classes */
+
+.carousel-container {
+    min-height: 50px;
+    padding: 15px;
+    overflow: visible;
+}
+
+.position-absolute {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    transform: translateY(-40px);
+}
+
+
+
+/*----------------------------------- CAROUSEL CONTROLS */
+
+a.carousel-control-prev {
+    width: 70px;
+    transform: translate(-40px, -10px);
+}
+
+a.carousel-control-next {
+    width: 70px;
+    transform: translate(40px, -10px);
+}
+
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+
+
+/* ---------------------- Footer */
+
+footer div.row span.small:hover{
+    color: white!important;
+    }
+
+    footer ul.list-unstyled>li.small{
+        font-size: 0.8em!important;
+    }
+    
+    footer ul.list-unstyled>li.small:hover{
+        text-decoration: underline;
+    }
+    
+
+
+/* ----------------------------------- VIEWPORT BREAKPOINTS and MEDIA QUERIES */
+
+/* XS viewport */
+
+@media (max-width:574px) {
+
+    .overlay:hover {
+        transform: scale(1.1);
+    }
+
+    .card-img-overlay {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(50%);
+    }
+  
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+
+
+
+/* SM viewport */
+
+  @media (min-width: 575px) and (max-width:767px) {  
+    .overlay:hover {
+        transform: scale(1.1);
+    }
+
+    .card-img-overlay {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.5%);
+    }
+  
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.5%);
+    }
+  }
+  
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+
+/* MD viewport */
+
+  @media (min-width: 768px) and (max-width:991px) {
+    .overlay:hover {
+        transform: scale(1.1);
+    }
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+  }
+  
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+
+
+/* LG viewport */
+  @media (min-width:991px) {
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(16.7%);
+    }
+  
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-16.7%);
+    }
+  }
+  
+  .carousel-inner .carousel-item-end,
+  .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+  }
+
+  /* ---------------------------------------- end of VIEWPORT BREAKPOINTS and MEDIA QUERIES */

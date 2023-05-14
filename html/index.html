@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap Library-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/netflix-logo-transparent.png" />
+    <title>Netflix Clone Exercise</title>
+</head>
+
+<body class="bg-dark">
+
+<!--------------------------- NAVBAR ---------------------------->
+
+
+    <!-------------- NAVBAR - left section ------------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-5">
+        <div class="container-fluid">
+            <a class="logo" href="#">
+                <img src="../assets/Netflix_Logo_RGB.png" height="50" alt="Netflix Logo" >
+            </a>
+
+<!----------------------- NAVBAR - right section - SMALL SCREEN -------------------------->
+        <div class="d-flex justify-content-center align-items-center">
+            <!--------------------- search input ------------------------>   
+            <div class="dropstart d-lg-none d-block">
+                <button type="button" class="btn border-0 bg-dark text-white sharp-button p-0 pe-1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-search text-light"></i>
+                </button>
+                <ul class="dropdown-menu p-0">
+                <input class="form-control sharp-button bg-dark text-white fw-light " type="search" placeholder="Titoli, persone, generi">
+                </ul>
+            </div>
+  
+              <span class="text-light mx-1 d-lg-none d-block">KIDS</span>
+  
+            <!----------------- dropdown notifications list ---------->
+            <div class="dropdown d-lg-none d-block ">
+                <button type="button" class="btn border-0 bg-dark text-white sharp-button p-0 ps-1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell-fill text-white"></i>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end bg-dark border-secondary sharp-button py-0">
+                    <li class="d-flex align-items-center m-3">
+                        <img src="../assets/movies/29.jpg" width="140px" alt="">
+                        <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                        In arrivo il 16 maggio <br> Guarda il trailer</a>
+                    </li>
+                
+                    <hr class="dropdown-divider border-secondary">
+        
+                    <li class="d-flex align-items-center m-3">
+                    <img src="../assets/movies/30.jpg" width="140px" alt="">
+                    <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                    Novità <br> Santa Clarita Diet</a>
+                    </li>
+                    
+                    <hr class="dropdown-divider border-secondary">
+        
+                    <li class="d-flex align-items-center m-3">
+                    <img src="../assets/movies/31.jpg" width="140px" alt="">
+                    <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                    In arrivo il 16 maggio <br> Guarda il trailer</a>
+                </li>   
+                </ul>
+            </div>
+
+            <!------------------ USER - DROPDOWN MENU ------------------>
+
+            <div class="dropdown d-lg-none d-block">
+                <img src="../assets/avatar.png" alt="Katherine Mercedes" class="avatar dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="dropdown-menu dropdown-menu-end bg-dark border-secondary sharp-button">
+                    <li>
+                        <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                        <i class="bi bi-pencil pe-3"></i>Gestisci i profili</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-light small px-3" href="#">
+                        <i class="bi bi-arrow-left-right pe-3"></i>Trasferisci profilo</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-light small px-3" href="#">
+                        <i class="bi bi-person pe-3"></i>Account</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-light small px-3" href="#">
+                        <i class="bi bi-question-circle pe-3"></i>Centro Assistenza</a>
+                    </li>
+                    <hr class="dropdown-divider border-secondary">
+                    <li>
+                        <a class="dropdown-item text-light text-center small x-3" href="#">Esci da Netflix</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--------------------------- END OF SMALL SCREEN USER MENU ------------------------------>
+
+            <!-- toggle button -->
+            <div class="d-flex d-lg-none">
+
+                <button 
+                    class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent"aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            </div>
+
+        </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto ms-3 mb-2 mb-lg-0 small ">
+
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item me-2 dropdown">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">TV Shows</a>
+                    </li>
+                    </li>
+
+                    <li class="nav-item me-2 dropdown">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Movies</a>
+                    </li>
+                    </li>
+
+                    <li class="nav-item me-2 dropdown">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Recently Added</a>
+                    </li>
+                    </li>
+
+                    <li class="nav-item me-2 dropdown">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">My List</a>
+                    </li>
+                    </li>
+
+                </ul>
+
+            <!----------------------- NAVBAR - right section -------------------------->
+
+            <!--------------------- search input ------------------------>   
+            <div class="dropstart d-lg-block d-none">
+                <button type="button" class="btn border-0 bg-dark text-white sharp-button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-search text-light"></i>
+                </button>
+                <ul class="dropdown-menu p-0">
+                <input class="form-control sharp-button bg-dark text-white fw-light " type="search" placeholder="Titoli, persone, generi">
+                </ul>
+            </div>
+  
+              <span class="text-light mx-2 d-lg-block d-none">KIDS</span>
+  
+            <!----------------- dropdown notifications list ---------->
+            <div class="dropdown d-lg-block d-none">
+                <button type="button" class="btn border-0 bg-dark text-white sharp-button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-bell-fill text-white"></i>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end bg-dark border-secondary sharp-button py-0">
+                    <li class="d-flex align-items-center m-3">
+                        <img src="../assets/movies/29.jpg" width="140px" alt="">
+                        <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                        In arrivo il 16 maggio <br> Guarda il trailer</a>
+                    </li>
+                
+                    <hr class="dropdown-divider border-secondary">
+        
+                    <li class="d-flex align-items-center m-3">
+                    <img src="../assets/movies/30.jpg" width="140px" alt="">
+                    <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                    Novità <br> Santa Clarita Diet</a>
+                    </li>
+                    
+                    <hr class="dropdown-divider border-secondary">
+        
+                    <li class="d-flex align-items-center m-3">
+                    <img src="../assets/movies/31.jpg" width="140px" alt="">
+                    <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                    In arrivo il 16 maggio <br> Guarda il trailer</a>
+                </li>   
+                </ul>
+            </div>
+
+            <!------------------ USER - DROPDOWN MENU ------------------>
+
+            <div class="dropdown d-lg-block d-none">
+                <img src="../assets/avatar.png" alt="Katherine Mercedes" class="avatar dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <ul class="dropdown-menu dropdown-menu-end bg-dark border-secondary sharp-button">
+                    <li>
+                        <a class="dropdown-item text-light small ps-3 pe-5" href="#">
+                        <i class="bi bi-pencil pe-3"></i>Gestisci i profili</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-light small px-3" href="#">
+                        <i class="bi bi-arrow-left-right pe-3"></i>Trasferisci profilo</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-light small px-3" href="#">
+                        <i class="bi bi-person pe-3"></i>Account</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item text-light small px-3" href="#">
+                        <i class="bi bi-question-circle pe-3"></i>Centro Assistenza</a>
+                    </li>
+                    <hr class="dropdown-divider border-secondary">
+                    <li>
+                        <a class="dropdown-item text-light text-center small x-3" href="#">Esci da Netflix</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--------------------------------------------------------->
+
+        </div>
+    </nav>
+
+
+<!---------------------------- MAIN ----------------------------->
+
+<main class="bg-dark text-light px-5 mt-3">
+
+    <!-------------------- HEADER ------------------->
+
+    <div class="d-flex mb-4 justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <h2 class="me-5 ms-3">TV Shows</h2>
+
+            <!-------------------------- Genres-dropdown-menu-->
+            <div class="dropdown">
+
+                <button class="btn dropdown-toggle bg-black text-light border-secondary sharp-button" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    Genres
+                </button>
+
+                <ul class="dropdown-menu bg-black border-secondary sharp-button">
+                    <li><a class="dropdown-item text-light small" href="#">Anime</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Azione</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Bambini e famiglie</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Commedie</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Corti</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Crime</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Documentari</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Drammi</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Europei</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Fantascienza</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Fantasy</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Horror</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Indipendenti</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Internazionali</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Italiani</a></li>
+                    <li><a class="dropdown-item text-light small" href="#">Musica e musical</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-end">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-rows border border-secondary border-1 py-0 px-2" data-name="List"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 6H0V4H24V6ZM24 18V20H0V18H24ZM0 13H12V11H0V13Z" fill="currentColor"></path></svg>
+        
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-icon svg-icon-grid border border-secondary border-1 py-0 px-2 me-3" data-name="GridFill"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 3C0.447715 3 0 3.44772 0 4V10C0 10.5523 0.447715 11 1 11H10C10.5523 11 11 10.5523 11 10V4C11 3.44772 10.5523 3 10 3H1ZM1 13C0.447715 13 0 13.4477 0 14V20C0 20.5523 0.447715 21 1 21H10C10.5523 21 11 20.5523 11 20V14C11 13.4477 10.5523 13 10 13H1ZM13 4C13 3.44772 13.4477 3 14 3H23C23.5523 3 24 3.44772 24 4V10C24 10.5523 23.5523 11 23 11H14C13.4477 11 13 10.5523 13 10V4ZM14 13C13.4477 13 13 13.4477 13 14V20C13 20.5523 13.4477 21 14 21H23C23.5523 21 24 20.5523 24 20V14C24 13.4477 23.5523 13 23 13H14Z" fill="currentColor"></path></svg>
+        </div>
+
+    </div>
+
+
+
+
+<!---------------- MOVIE CAROUSEL SECTION - Continue to watch-->
+    <div class="animazione carousel-down">
+        <h4 class="mb-1 ms-3">Katherine, continue to watch:</h4>
+
+        <div class="text-center">
+
+                <div class="row my-auto justify-content-center">
+                    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner carousel-container align-items-center" role="listbox">
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item active">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/1.png" class="img-fluid" alt="Unorthodox">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/1.png" class="card-img-top" alt="Unorthodox">
+
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+
+                                                    <div class="d-flex justify-content-between ">
+
+                                                        <div>
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+
+                                                    </div>
+
+                                                    <div class="small">
+
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="text-success small fw-bold">87% compatibile</span>
+                                                            <span class="restriction border text-light small px-1">13+</span>
+                                                            <span>Miniserie</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Profondo</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Emozionante</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/2.png" class="img-fluid" alt="After Life">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/2.png" class="card-img-top" alt="After Life">
+
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="text-success small fw-bold">78% compatibile</span>
+                                                            <span class="restriction border text-light small px-1">16+</span>
+                                                            <span class="fw-light">3 stagioni</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Umorismo inglese</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Arguto</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Irriverente</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/3.png" class="img-fluid" alt="Vis a Vis">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/3.png" class="card-img-top" alt="Vis a Vis">
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="text-success small fw-bold">71% compatibile</span>
+                                                            <span class="restriction border text-light small px-1">16+</span>
+                                                            <span class="fw-light">5 stagioni</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Spagnolo</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Serie TV Crime</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Thriller TV</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/4.png" class="img-fluid">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/4.png" class="card-img-top" alt="The Place">
+                                                <!-- Card bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="text-success small fw-bold">57% compatibile</span>
+                                                            <span class="restriction border text-light small px-1">13+</span>
+                                                            <span>Miniserie</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Profondo</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Emozionante</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/5.png" class="img-fluid" alt="Summertime">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/5.png" class="card-img-top" alt="Summertime">
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="restriction border text-light small px-1">13+</span>
+                                                            <span>3 stagioni</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Dolceamaro</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Romantico</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/6.png" class="img-fluid" alt="I delitti di Valhalla">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute"
+                                                style="width: 18rem;">
+                                                <img src="../assets/movies/6.png" class="card-img-top"
+                                                    alt="I delitti di Valhalla">
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="restriction border text-light small px-1">13+</span>
+                                                            <span>3 stagioni</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Cupo</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Suspense</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Noir Nordico</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/7.png" class="img-fluid" alt="L'altra Grace">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/7.png" class="card-img-top" alt="L'altra Grace">
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="text-success small fw-bold">57% compatibile<span>
+                                                            <span class="restriction border text-light small px-1">13+<span>
+                                                            <span>Miniserie</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Intellettuale</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Psicologico</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Storico</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/8.png" class="img-fluid" alt="Virgin River">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/8.png" class="card-img-top" alt="Virgin River">
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="text-success small fw-bold">89% compatibile</span>
+                                                            <span class="restriction border text-light small px-1">13+</span>
+                                                            <span>4 stagioni</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Stile Soap</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Dolceamaro</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Dramma</li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------- MOVIE - CARD -------->
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                    <div class="card border-0 overlay">
+                                        <div class="card-img p-1 bg-dark">
+                                            <img src="../assets/movies/9.png" class="img-fluid" alt="The english game">
+                                        </div>
+
+                                        <!---------- CARD OVERLAY - Movie Info --------->
+                                        <div class="card-img-overlay d-none">
+                                            <!-- Card Top -->
+                                            <div class="card border-0 shadow position-absolute" style="width: 18rem;">
+                                                <img src="../assets/movies/9.png" class="card-img-top" alt="The english game">
+                                                <!-- Card Bottom -->
+                                                <div class="card-body bg-custom py-2 px-3">
+                                                    <div class="d-flex justify-content-between ">
+                                                        <div>
+                                                            <!-- bottoni riproduzione -->
+                                                            <i class="bi bi-play-circle-fill video-icon"></i>
+                                                            <i class="bi bi-plus-circle video-icon"></i>
+                                                            <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                        </div>
+                                                        <i class="bi bi-chevron-down small video-icon"></i>
+                                                    </div>
+
+                                                    <div class="small">
+                                                        <div class="d-flex mt-2 align-items-center gap-2">
+                                                            <span class="restriction border text-light small px-1">13+</span>
+                                                            <span>6 episodi</span>
+                                                            <i class="bi bi-badge-hd"></i>
+                                                        </div>
+
+                                                        <ul class="d-flex mt-2 list-inline align-items-center">
+                                                            <li>Drammi TV</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Britannico</li>
+                                                            <span class="evidence-separator"></span>
+                                                            <li>Storico</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAROUSEL CONTROL BTN -->
+                        <a class="carousel-control-prev bg-dark mx-0" href="#recipeCarousel" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next bg-dark me-0" href="#recipeCarousel" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <!----------------- MOVIE CAROUSEL SECTION - Watch it again -->
+    <div class="animazione carousel-down">
+        <h4 class="mb-1 mt-5 ms-3">Trending now</h4>
+
+        <div class="text-center">
+
+            <div class="row my-auto justify-content-center">
+                <div id="recipeCarousel-two" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner carousel-container align-items-center" role="listbox">
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item active">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/10.png" class="img-fluid" alt="Il metodo Kominsky">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/10.png" class="card-img-top" alt="Il metodo Kominsky">
+
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+
+                                                <div class="d-flex justify-content-between ">
+
+                                                    <div>
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+
+                                                </div>
+
+                                                <div class="small">
+
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">68% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>3 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Ammiccante</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Arguto</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Irriverente</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/11.png" class="img-fluid" alt="Patto d'amore">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/11.png" class="card-img-top" alt="Patto d'amore">
+
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">81% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">16+</span>
+                                                        <span class="fw-light">3 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Umorismo inglese</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Arguto</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Irriverente</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/12.png" class="img-fluid" alt="La casa de las flores">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/12.png" class="card-img-top" alt="La casa de las flores">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">88% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span class="fw-light">3 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Camp</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Sensuale</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/13.png" class="img-fluid" alt="Collateral beauty">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/13.png" class="card-img-top" alt="Collateral beauty">
+                                            <!-- Card bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">57% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>1h 37min</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Drammatico</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Fantastico</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/14.png" class="img-fluid" alt="Self-Made La vita di Madame J. Walker">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/14.png" class="card-img-top" alt="Self-Made La vita di Madame J. Walker">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>Miniserie</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Motivante</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Ottimista</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Emozionante</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/15.png" class="img-fluid" alt="Freud">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none"
+                                            style="width: 18rem;">
+                                            <img src="../assets/movies/15.png" class="card-img-top"
+                                                alt="Freud">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="restriction border text-light small px-1">16+</span>
+                                                        <span>8 episodi</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Psicologico</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Cupo</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Giallo</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/16.png" class="img-fluid" alt="Grace and Frankie">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/16.png" class="card-img-top" alt="Grace and Frankie">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">95% compatibile<span>
+                                                        <span class="restriction border text-light small px-1">13+<span>
+                                                        <span>7 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Arguto</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Bizzarro</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Sitcom</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/17.png" class="img-fluid" alt="Lasciati andare">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/17.png" class="card-img-top" alt="Lasciati andare">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">57% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>Miniserie</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Profondo</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Emozionante</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/18.png" class="img-fluid" alt="Dogman">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/18.png" class="card-img-top" alt="Dogman">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">57% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>1h 42min</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Drammatico</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CAROUSEL CONTROL BTN -->
+                    <a class="carousel-control-prev bg-dark mx-0" href="#recipeCarousel-two" role="button"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next bg-dark me-0" href="#recipeCarousel-two" role="button"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!----------------- MOVIE CAROUSEL SECTION - Watch it again -->
+    <div class="animazione carousel-down">
+        <h4 class="mb-1 mt-5 ms-3">New releases</h4>
+
+        <div class="text-center">
+
+            <div class="row my-auto justify-content-center">
+                <div id="recipeCarousel-three" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner carousel-container align-items-center" role="listbox">
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item active">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/20.jpg" class="img-fluid" alt="Unbreakable Kimmy Schmidt">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/20.jpg" class="card-img-top" alt="Unbreakable Kimmy Schmidt">
+
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+
+                                                <div class="d-flex justify-content-between ">
+
+                                                    <div>
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+
+                                                </div>
+
+                                                <div class="small">
+
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">100% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>4 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Arguto</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Bizzarro</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Divertente</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/21.jpg" class="img-fluid" alt="Crazy Ex-Girlfriend">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/21.jpg" class="card-img-top" alt="Crazy Ex-Girlfriend">
+
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">80% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">16+</span>
+                                                        <span class="fw-light">4 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Bizzarro</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Romantico</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/22.jpg" class="img-fluid" alt="Bojack Horsman">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/22.jpg" class="card-img-top" alt="Bojack Horsman">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">92% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">16+</span>
+                                                        <span class="fw-light">6 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Umorismo inglese</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Arguto</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Irriverente</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/23.jpg" class="img-fluid" alt="One day at the time">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/23.jpg" class="card-img-top" class="One day at the time">
+                                            <!-- Card bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">81% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>3 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Divertente</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Ottimista</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Emozionante</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/24.jpg" class="img-fluid" alt="Wednesday">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/24.jpg" class="card-img-top" alt="Wednesday">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="restriction border text-light small px-1">13+</span>
+                                                        <span>1 stagione</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Umorismo</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Commedia cupa</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Detective</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/25.jpg" class="img-fluid" alt="Rick and Morty">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none"
+                                            style="width: 18rem;">
+                                            <img src="../assets/movies/25.jpg" class="card-img-top"
+                                            alt="Rick and Morty">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="restriction border text-light small px-1">16+</span>
+                                                        <span>6 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Assurdo</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Bizzarro</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Irriverente</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/26.jpg" class="img-fluid" alt="Ru Paul Drag Race">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/26.jpg" class="card-img-top" alt="Ru Paul Drag Race">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">91% compatibile<span>
+                                                        <span>3 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Camp</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/27.jpg" class="img-fluid">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/27.jpg" class="card-img-top" alt="Orange is the new black">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">91% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">16+</span>
+                                                        <span>7 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Umorismo</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Arguto</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Irriverente</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------- MOVIE - CARD -------->
+                        <div class="carousel-item">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                                <div class="card border-0 overlay">
+                                    <div class="card-img p-1 bg-dark">
+                                        <img src="../assets/movies/28.jpg" class="img-fluid" alt="Russian Doll">
+                                    </div>
+
+                                    <!---------- CARD OVERLAY - Movie Info --------->
+                                    <div class="card-img-overlay">
+                                        <!-- Card Top -->
+                                        <div class="card border-0 shadow position-absolute d-none" style="width: 18rem;">
+                                            <img src="../assets/movies/28.jpg" class="card-img-top" alt="Russian Doll">
+                                            <!-- Card Bottom -->
+                                            <div class="card-body bg-custom py-2 px-3">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>
+                                                        <!-- bottoni riproduzione -->
+                                                        <i class="bi bi-play-circle-fill video-icon"></i>
+                                                        <i class="bi bi-plus-circle video-icon"></i>
+                                                        <i class="bi bi-hand-thumbs-up video-icon"></i>
+                                                    </div>
+                                                    <i class="bi bi-chevron-down small video-icon"></i>
+                                                </div>
+
+                                                <div class="small">
+                                                    <div class="d-flex mt-2 align-items-center gap-2">
+                                                        <span class="text-success small fw-bold">88% compatibile</span>
+                                                        <span class="restriction border text-light small px-1">16+</span>
+                                                        <span>2 stagioni</span>
+                                                        <i class="bi bi-badge-hd"></i>
+                                                    </div>
+
+                                                    <ul class="d-flex mt-2 list-inline align-items-center">
+                                                        <li>Anticonformistico</li>
+                                                        <span class="evidence-separator"></span>
+                                                        <li>Arguto</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CAROUSEL CONTROL BTN -->
+                    <a class="carousel-control-prev bg-dark mx-0" href="#recipeCarousel-three" role="button"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next bg-dark me-0" href="#recipeCarousel-three" role="button"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<!-- ----------------------------  FOOTER ------------------------------>
+<footer>
+    <div class="row w-100">
+        <div class="col-xl-6 col-lg-9 col-md-10 col-sm-10 offset-xl-3 offset-lg-2 offset-md-2 offset-sm-2 offset-1">
+
+            <!-- social media -->
+            <ul class="d-flex list-inline gap-4 text-light">
+                <li><i class="bi bi-facebook h4"></i></li>
+                <li><i class="bi bi-instagram h4"></i></li>
+                <li><i class="bi bi-twitter h4"></i></li>
+                <li><i class="bi bi-youtube h4"></i></li>
+            </ul>
+
+            <!-- footer links alternative -->
+            <ul class="list-unstyled d-flex flex-wrap">
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Audio and Subtitles</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Audio Description</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Help Center</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Gift Cards</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Media center</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Investor Relations</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Jobs</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Terms of Use</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Privacy</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Legal Notices</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Cookie Preferences</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Corporate Information</a></li>
+                <li class="small pb-2 col-md-3 col-sm-4 col-6"><a href="#" class="link-secondary text-decoration-none">Contact Us</a></li>
+                
+            </ul>
+
+            <span class="small border border-secondary p-1 fw-light text-secondary">Service Code</span>
+            <p class="small mt-3 text-secondary fw-light">1997-2023 Netflix, Inc.</p>
+
+        </div>
+
+        </div>
+      </div>
+</footer>
+
+<!----------------------------- Script Links--------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script src="../javascript/script.js"></script>
+</body>
+
+</html>
